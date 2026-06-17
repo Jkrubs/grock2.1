@@ -1,0 +1,68 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #0a0a0a;
+  --foreground: #ffffff;
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: var(--font-lexend-deca), sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6, .font-heading {
+  font-family: var(--font-barlow), sans-serif;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+/* Swiper Slider Custom Styles */
+.hero-swiper {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  inset: 0;
+}
+
+/* Ken Burns / Slow Zoom animation for the active slide background */
+.swiper-slide-active .hero-bg-zoom {
+  transform: scale(1.08);
+}
+
+.hero-bg-zoom {
+  transition: transform 6000ms ease-out;
+}
+
+@keyframes sliderProgress {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+/* Custom Swiper Navigation Arrow Overrides */
+.swiper-button-prev, .swiper-button-next {
+  color: #ffffff !important;
+  opacity: 0.25;
+  transition: opacity 0.3s, color 0.3s;
+}
+
+.swiper-button-prev:hover, .swiper-button-next:hover {
+  opacity: 0.9;
+  color: #FFDF1B !important;
+}
+
+.swiper-button-prev::after, .swiper-button-next::after {
+  font-size: 24px !important;
+  font-weight: 900;
+}
+
