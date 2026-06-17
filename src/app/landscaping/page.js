@@ -15,7 +15,7 @@ const barlow = Barlow({
 export default function landscaping() {
   return (
     <>
-    <div className={` ${barlow.className} w-[100%] h-[100vh] flex  items-center bg-[url(&atpos;/cabro3.webp&atpos;)] bg-center bg-cover bg-no-repeat `}>
+    <div className={` ${barlow.className} w-[100%] h-[100vh] flex  items-center bg-[url('/cabro3.webp';)] bg-center bg-cover bg-no-repeat `}>
       <div className="absolute inset-0 bg-gradient-to-r from-black/95 via-black/75 to-black/30" />
       <div className="my-20 mx-5 z-40">
       <h1 className="font-bold text-7xl max-w-4xl" ><span className="text-[#FFDF1B]">Cabro layers </span>and Landscaping Contractors in  Kenya</h1>
@@ -47,7 +47,7 @@ export default function landscaping() {
           <div className="flex flex-wrap gap-[3%]">
                         {landscapingSequences.map((sequence, index) => (
                             <div key={index} className="w-[22%] h-[250px] mb-3 border rounded-xl p-4">
-                                <div className="font-black text-5xl text-[#008000] ">{sequence.id.toString().padStart(2, &atpos;0&atpos;)}</div>
+                                <div className="font-black text-5xl text-[#008000] ">{sequence.id.toString().padStart(2, '0')}</div>
                                 <div className="seq-info">
                                     <div className="font-bold text-[#FFDF1B] text-2xl my-5">{sequence.name}</div>
                                     <div>{sequence.description}</div>
