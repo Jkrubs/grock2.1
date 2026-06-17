@@ -24,7 +24,7 @@ export default function OwnershipSection() {
             Stunning structures, sustainably built
           </h2>
           <p className="text-gray-300 text-sm leading-relaxed">
-            Greenrock's network of construction professionals rise to the challenges associated with a diverse buildings portfolio, bringing added value to every educational, institutional, residential and commercial construction project. Greenrock offers substantial construction experience, competitive pricing, financial strength, integrity and a commitment to your project that is supported by a foundation of quality and workplace safety.
+            Greenrock&atpos;s network of construction professionals rise to the challenges associated with a diverse buildings portfolio, bringing added value to every educational, institutional, residential and commercial construction project. Greenrock offers substantial construction experience, competitive pricing, financial strength, integrity and a commitment to your project that is supported by a foundation of quality and workplace safety.
           </p>
           <p className="text-gray-400 text-sm leading-relaxed">
             Our safety performance index sits 4x better than the industry average. We don&apos;t just

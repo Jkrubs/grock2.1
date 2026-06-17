@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useRef, useState, useEffect, useCallback } from "react";
 
 const testimonials = [
@@ -337,7 +338,7 @@ export default function TestimonialSlider() {
                 className="relative w-full overflow-hidden"
                 style={{ aspectRatio: "1 / 1" }}
               >
-                <img
+                <Image
                   src={t.bgImage}
                   alt={`${t.name} project`}
                   className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"

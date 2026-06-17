@@ -19,7 +19,7 @@ export default function equipments() {
       <div className="absolute inset-0 bg-gradient-to-r from-black/95 via-black/75 to-black/30" />
       <div className="my-20 mx-5 z-40">
       <h1 className="font-bold text-7xl max-w-4xl" >Your One-Stop Source For All<span className="text-[#FFDF1B]"> Construction Equipments</span></h1>
-      <p className="max-w-4xl my-8">Your space doesn't need to be torn down to be transformed. As trusted renovation contractors in Kenya, we specialise in giving tired homes and outdated commercial buildings a second life — without the chaos, the surprise costs, or the months of disruption that usually come with renovation work.</p>
+      <p className="max-w-4xl my-8">Your space doesn&atpos;t need to be torn down to be transformed. As trusted renovation contractors in Kenya, we specialise in giving tired homes and outdated commercial buildings a second life — without the chaos, the surprise costs, or the months of disruption that usually come with renovation work.</p>
       <button  className="bg-[#006330] hover:bg-[#004d26] text-white border border-[#FFDF1B] text-center px-8 py-4 text-xs font-bold uppercase tracking-widest transition-all duration-300 shadow-lg hover:shadow-[#006330]/50">Hire Equipment Now</button>
       <button  className="bg-[#006330] ml-10 hover:bg-[#004d26] text-white border border-[#FFDF1B] text-center px-8 py-4 text-xs font-bold uppercase tracking-widest transition-all duration-300 shadow-lg hover:shadow-[#006330]/50">Call Consultant</button>
       </div>
@@ -29,7 +29,7 @@ export default function equipments() {
             How We Do It
           </div>
           <h2 className="font-bold text-5xl my-5">Hire the Right Tool For Each Job</h2>
-          <p>Every construction project requires the right equipment to achieve the best results efficiently and cost-effectively. From excavators for earthworks and foundation digging to graders for road construction and rollers for compaction, we provide a wide range of reliable machinery tailored to your project's specific needs. Our experienced team can help you identify the most suitable equipment, ensuring maximum productivity, reduced downtime, and successful project completion—whether you're undertaking a residential build, commercial development, infrastructure project, or land clearing operation anywhere in Kenya.</p>
+          <p>Every construction project requires the right equipment to achieve the best results efficiently and cost-effectively. From excavators for earthworks and foundation digging to graders for road construction and rollers for compaction, we provide a wide range of reliable machinery tailored to your project&atpos;s specific needs. Our experienced team can help you identify the most suitable equipment, ensuring maximum productivity, reduced downtime, and successful project completion—whether you&atpos;re undertaking a residential build, commercial development, infrastructure project, or land clearing operation anywhere in Kenya.</p>
       </div>
        <div className="mt-10 mx-5 flex justify-between flex-wrap">
                         {equipment_hire.map((process, index) => (
@@ -64,10 +64,10 @@ export default function equipments() {
                     </div>
          <div className="mt-20 mx-5">
            <div className="text-xs font-bold uppercase tracking-widest text-[#FFDF1B]">
-            How it's done
+            How it&atpos;s done
           </div>
           <h2 className="font-bold text-5xl my-5">Why Contractors Choose Our Equipment Hire Services</h2>
-          <p className="mb-8">Your project's success depends on having the right equipment at the right time. We partner with contractors across Kenya to deliver dependable machinery, fast mobilization, and expert support that keeps projects on schedule and within budget. From small residential developments to major infrastructure works, our clients choose us for our well-maintained fleet, transparent pricing, nationwide coverage, and commitment to minimizing downtime. When deadlines matter and reliability is non-negotiable, we're the equipment hire partner you can count on.</p>
+          <p className="mb-8">Your project&atpos;s success depends on having the right equipment at the right time. We partner with contractors across Kenya to deliver dependable machinery, fast mobilization, and expert support that keeps projects on schedule and within budget. From small residential developments to major infrastructure works, our clients choose us for our well-maintained fleet, transparent pricing, nationwide coverage, and commitment to minimizing downtime. When deadlines matter and reliability is non-negotiable, we&atpos;re the equipment hire partner you can count on.</p>
           <div className="flex flex-wrap gap-[3%]">
                         {equipment_sequence.map((sequence, index) => (
                             <div key={index} className="w-[22%]  mb-3 border rounded-xl p-4">

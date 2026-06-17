@@ -19,7 +19,7 @@ export default function custom() {
       <div className="absolute inset-0 bg-gradient-to-r from-black/95 via-black/75 to-black/30" />
       <div className="my-20 mx-5 z-40">
       <h1 className="font-bold text-7xl max-w-4xl" ><span className="text-[#FFDF1B]">General Contracting </span>and Home Building Services in Kenya</h1>
-      <p className="max-w-4xl mt-8">When you need a reliable general contractor in Kenya who can take your project from bare ground to finished building without you chasing five different people, this is what we do best. As one of Kenya's leading construction contractors, general contracting is the backbone of GreenRock Solutions — we coordinate the architects, the engineers, the trades, and the timeline, so you only ever have one number to call.</p>
+      <p className="max-w-4xl mt-8">When you need a reliable general contractor in Kenya who can take your project from bare ground to finished building without you chasing five different people, this is what we do best. As one of Kenya&atpos;s leading construction contractors, general contracting is the backbone of GreenRock Solutions — we coordinate the architects, the engineers, the trades, and the timeline, so you only ever have one number to call.</p>
       </div>
       </div>
       <div className="mt-20 mx-5">
@@ -27,7 +27,7 @@ export default function custom() {
             How We Do It
           </div>
           <h2 className="font-bold text-5xl my-5">Our Custom Home Building Process</h2>
-          <p>Every general contracting project with GreenRock Solutions follows a process built to remove the guesswork that gives Kenyan construction its bad reputation. We start by walking your site and listening to your vision, your budget, and your timeline  before a single drawing is made. From there, our architects and engineers develop detailed construction plans, and you receive a fully itemised quote so you know exactly what you're paying for and why. Once permits and approvals are secured, our experienced construction teams break ground, with weekly progress updates keeping you informed every step of the way  not just at the milestones that make us look good. As your trusted general contractor in Kenya, we run multiple quality checkpoints throughout the build, not just at the end, catching issues while they're still cheap to fix. When the project wraps, you get a final walkthrough, a comprehensive warranty, and  unlike too many building contractors in Kenya  a team that still picks up the phone long after handover.</p>
+          <p>Every general contracting project with GreenRock Solutions follows a process built to remove the guesswork that gives Kenyan construction its bad reputation. We start by walking your site and listening to your vision, your budget, and your timeline  before a single drawing is made. From there, our architects and engineers develop detailed construction plans, and you receive a fully itemised quote so you know exactly what you&atpos;re paying for and why. Once permits and approvals are secured, our experienced construction teams break ground, with weekly progress updates keeping you informed every step of the way  not just at the milestones that make us look good. As your trusted general contractor in Kenya, we run multiple quality checkpoints throughout the build, not just at the end, catching issues while they&atpos;re still cheap to fix. When the project wraps, you get a final walkthrough, a comprehensive warranty, and  unlike too many building contractors in Kenya  a team that still picks up the phone long after handover.</p>
       </div>
        <div className="mt-10 mx-5 flex justify-between flex-wrap">
                         {residential_process.map((process, index) => (
@@ -40,7 +40,7 @@ export default function custom() {
                     </div>
          <div className="mt-20 mx-5">
            <div className="text-xs font-bold uppercase tracking-widest text-[#FFDF1B]">
-            How it's done
+            How it&atpos;s done
           </div>
           <h2 className="font-bold text-5xl my-5">Our Sequence Of Work</h2>
           <div className="flex flex-wrap justify-between">
