@@ -15,7 +15,7 @@ const testimonials = [
     product: "Commercial Construction",
     avatar: "AO",
     avatarColor: "#2d5a27",
-    bgImage: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=400&q=80",
+    bgImage: "/wwa2.webp",
   },
   {
     id: 2,
@@ -28,7 +28,7 @@ const testimonials = [
     product: "Office Complex",
     avatar: "FA",
     avatarColor: "#1a3d5c",
-    bgImage: "https://images.unsplash.com/photo-1486325212027-8081e485255e?w=400&q=80",
+    bgImage: "/wwa2.webp",
   },
   {
     id: 3,
@@ -41,7 +41,7 @@ const testimonials = [
     product: "Industrial Expansion",
     avatar: "KM",
     avatarColor: "#4a3728",
-    bgImage: "https://images.unsplash.com/photo-1565008447742-97f6f38c985c?w=400&q=80",
+    bgImage: "/wwa2.webp",
   },
   {
     id: 4,
@@ -54,7 +54,7 @@ const testimonials = [
     product: "Retail Development",
     avatar: "PS",
     avatarColor: "#5c1a3d",
-    bgImage: "https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=400&q=80",
+    bgImage: "/wwa2.webp",
   },
   {
     id: 5,
@@ -67,7 +67,7 @@ const testimonials = [
     product: "Mixed-Use Building",
     avatar: "EN",
     avatarColor: "#1c4a1c",
-    bgImage: "https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=400&q=80",
+    bgImage: "/wwa2.webp",
   },
   {
     id: 6,
@@ -80,7 +80,7 @@ const testimonials = [
     product: "Residential Tower",
     avatar: "ZK",
     avatarColor: "#3d2a5c",
-    bgImage: "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=400&q=80",
+    bgImage: "/wwa2.webp",
   },
   {
     id: 7,
@@ -93,7 +93,7 @@ const testimonials = [
     product: "Industrial Renovation",
     avatar: "DM",
     avatarColor: "#2a4a5c",
-    bgImage: "https://images.unsplash.com/photo-1487958449943-2429e8be8625?w=400&q=80",
+    bgImage: "/wwa2.webp",
   },
   {
     id: 8,
@@ -106,7 +106,7 @@ const testimonials = [
     product: "Hospitality Complex",
     avatar: "NO",
     avatarColor: "#5c3a1c",
-    bgImage: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=400&q=80",
+    bgImage: "/wwa2.webp",
   },
   {
     id: 9,
@@ -119,7 +119,7 @@ const testimonials = [
     product: "Logistics Hub",
     avatar: "SW",
     avatarColor: "#1c3d2a",
-    bgImage: "https://images.unsplash.com/photo-1553413077-190dd305871c?w=400&q=80",
+    bgImage: "/wwa2.webp",
   },
   {
     id: 10,
@@ -132,7 +132,7 @@ const testimonials = [
     product: "Healthcare Facility",
     avatar: "AM",
     avatarColor: "#3d1c4a",
-    bgImage: "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=400&q=80",
+    bgImage: "/wwa2.webp",
   },
 ];
 
@@ -246,10 +246,10 @@ export default function TestimonialSlider() {
   };
 
   return (
-    <section className="relative bg-[#f5f6f6] py-16 overflow-hidden">
+    <section className="relative bg-[#0a0a0a] py-8 overflow-hidden">
       {/* ── Community Header (oraimo-style) ── */}
-      <div className="px-6 md:px-10 lg:px-16 mb-10">
-        <div className="max-w-[1360px] mx-auto">
+      <div className=" md:px-10 mb-10">
+        <div className="">
           {/* Social Handle Row */}
           <div className="flex items-center gap-3 mb-4">
             <svg
@@ -257,24 +257,24 @@ export default function TestimonialSlider() {
               height="32"
               viewBox="0 0 24 24"
               fill="none"
-              stroke="#111"
+              stroke="#fff"
               strokeWidth="2"
               strokeLinecap="round"
               strokeLinejoin="round"
             >
               <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
               <circle cx="12" cy="12" r="4" />
-              <circle cx="17.5" cy="6.5" r="1" fill="#111" stroke="none" />
+              <circle cx="17.5" cy="6.5" r="1" fill="#fff" stroke="none" />
             </svg>
             <span
-              className="text-[#111] font-bold"
+              className="text-[#fff] font-bold"
               style={{ fontSize: "clamp(1.2rem, 3vw, 2rem)", letterSpacing: "-0.02em" }}
             >
               @greenrocksolutions
             </span>
             <a
               href="#"
-              className="ml-2 px-5 py-2 text-sm font-bold text-white bg-[#111] rounded-full hover:bg-[#333] transition-colors duration-200 select-none"
+              className="ml-2 px-5 py-2 text-sm font-bold text-[#FFDF1B] bg-[#fff] rounded-full hover:bg-[#333] transition-colors duration-200 select-none"
               style={{ letterSpacing: "0.02em" }}
             >
               Follow us
@@ -283,15 +283,15 @@ export default function TestimonialSlider() {
 
           {/* Description */}
           <p
-            className="text-[#444] leading-relaxed max-w-3xl"
+            className="text-[#fff] leading-relaxed "
             style={{ fontSize: "clamp(0.9rem, 1.6vw, 1.1rem)" }}
           >
             Trusted by hundreds of clients across Kenya, our work speaks for itself. Share your
             GreenRock experience on Instagram using{" "}
-            <strong className="text-[#111]">#GreenRockSolutions</strong> and tagging{" "}
-            <strong className="text-[#111]">@greenrocksolutions</strong>. We celebrate every
+            <strong className="text-[#FFDF1B]">#GreenRockSolutions</strong> and tagging{" "}
+            <strong className="text-[#FFDF1B]">@greenrocksolutions</strong>. We celebrate every
             milestone our clients achieve.{" "}
-            <strong className="text-[#111]">Keep Building. Keep Growing.</strong>
+            <strong className="text-[#FFDF1B]">Keep Building. Keep Growing.</strong>
           </p>
         </div>
       </div>
@@ -340,8 +340,10 @@ export default function TestimonialSlider() {
               >
                 <Image
                   src={t.bgImage}
+                  width={100}
+                  height={100}
                   alt={`${t.name} project`}
-                  className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+                  className="w-[100%] h-full object-cover transition-transform duration-500 hover:scale-105"
                   draggable={false}
                 />
                 {/* Product tag */}
@@ -432,7 +434,7 @@ export default function TestimonialSlider() {
             <button
               onClick={() => scrollTo("prev")}
               aria-label="Previous testimonial"
-              className="w-10 h-10 rounded-full border-2 border-[#111] flex items-center justify-center hover:bg-[#111] hover:text-white text-[#111] transition-all duration-200 group"
+              className="w-10 h-10 rounded-full border-2 border-[#FFDF1B] flex items-center justify-center hover:bg-[#FFDF1B] hover:text-white text-[#111] transition-all duration-200 group"
             >
               <svg
                 width="16"
@@ -450,7 +452,7 @@ export default function TestimonialSlider() {
             <button
               onClick={() => scrollTo("next")}
               aria-label="Next testimonial"
-              className="w-10 h-10 rounded-full bg-[#111] flex items-center justify-center text-white hover:bg-[#333] transition-all duration-200"
+              className="w-10 h-10 rounded-full bg-[#FFDF1B] flex items-center justify-center text-white hover:bg-[#333] transition-all duration-200"
             >
               <svg
                 width="16"

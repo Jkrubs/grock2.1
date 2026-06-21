@@ -15,7 +15,7 @@ const barlow = Barlow({
 export default function remodelling() {
   return (
     <>
-    <div className={` ${barlow.className} w-[100%] h-[100vh] flex  items-center bg-[url(&atpos;/renovations.webp&atpos;)] bg-center bg-cover bg-no-repeat `}>
+    <div className={` ${barlow.className} w-[100%] h-[100vh] flex  items-center bg-[url('/renovations.webp';)] bg-center bg-cover bg-no-repeat `}>
       <div className="absolute inset-0 bg-gradient-to-r from-black/95 via-black/75 to-black/30" />
       <div className="my-20 mx-5 z-40">
       <h1 className="font-bold text-7xl max-w-4xl" ><span className="text-[#FFDF1B]">Whole Home Remodels </span>and Renovations Contractors in Nairobi Kenya</h1>
