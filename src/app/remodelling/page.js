@@ -43,7 +43,7 @@ export default function remodelling() {
             How it&atpos;s done
           </div>
           <h2 className="font-bold text-5xl my-5">Our Sequence Of Work</h2>
-          <p>We start by assessing what&atpos;s already there, the structure, the systems, the constraints we have to work within. From that, we put together renovation plans and a transparent quote, so there&atpos;s no scope creep once work begins. We handle any permits your county requires, then move into execution, working in phases where possible to keep your home or business livable throughout. Every renovation gets the same quality checks as a new build, because half measures on an upgrade aren&atpos;t really an upgrade. When we're done, we walk the space with you, clean up properly, and stand behind the work with a warranty, just like we do on every project.</p>
+          <p>We start by assessing what&atpos;s already there, the structure, the systems, the constraints we have to work within. From that, we put together renovation plans and a transparent quote, so there&atpos;s no scope creep once work begins. We handle any permits your county requires, then move into execution, working in phases where possible to keep your home or business livable throughout. Every renovation gets the same quality checks as a new build, because half measures on an upgrade aren&atpos;t really an upgrade. When we&atpos;re done, we walk the space with you, clean up properly, and stand behind the work with a warranty, just like we do on every project.</p>
           <div className="flex flex-wrap gap-[3%]">
                         {renovationsSequences.map((sequence, index) => (
                             <div key={index} className="w-[22%] h-[250px] mb-3 border rounded-xl p-4">

@@ -17,7 +17,7 @@ export default function Projects() {
         <span className="text-[#FFDF1B]">Building the future </span>of the <br/>construction industry, one project <br/>at a time
       </h1>
       <p className="text-gray-400 ">
-        Seeing is believing. Your project can make or break your reputation and bottom line. We get it. That's why we serve as your project partner and guide, every step of the way. Lending decades of expertise, our established teams have created a sustainable framework for success.
+        Seeing is believing. Your project can make or break your reputation and bottom line. We get it. That&atpos;s why we serve as your project partner and guide, every step of the way. Lending decades of expertise, our established teams have created a sustainable framework for success.
       </p>
     </div>
      <div className=" mx-5 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
