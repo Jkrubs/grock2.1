@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://greenrock.co.ke
+
+# Sitemaps
+Sitemap: https://greenrock.co.ke/sitemap.xml

@@ -47,6 +47,7 @@ export default function RootLayout({ children }) {
           src="/scaffolding-transition.js"
           strategy="afterInteractive"
         />
+        <meta name="google-site-verification" content="E7XGFGbqrOCoJh6WvksqwQuiEVckQPAkuJL9lbN4ri0" />
         
       </head>
       <body className={`${barlow.className}  bg-[#0a0a0a] text-white antialiased min-h-screen flex flex-col font-sans`}>
