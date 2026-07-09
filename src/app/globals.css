@@ -66,3 +66,141 @@ h1, h2, h3, h4, h5, h6, .font-heading {
   font-weight: 900;
 }
 
+
+/* Site theme support */
+html {
+  color-scheme: dark;
+}
+
+html.light {
+  color-scheme: light;
+  --background: #f7f5ee;
+  --foreground: #102016;
+}
+
+html.light body {
+  background: var(--background) !important;
+  color: var(--foreground) !important;
+}
+
+html.light main,
+html.light main > div,
+html.light .bg-\[\#0a0a0a\] {
+  background-color: #f7f5ee !important;
+  color: #102016 !important;
+}
+
+html.light .bg-\[\#0c0c0c\],
+html.light .bg-black\/25,
+html.light .bg-black\/40,
+html.light .bg-black\/20,
+html.light .bg-black\/35,
+html.light .bg-black\/40,
+html.light .bg-\[\#0d0d0d\] {
+  background-color: #ffffff !important;
+  color: #102016 !important;
+}
+
+html.light .border-white\/5,
+html.light .border-white\/10,
+html.light .border-white\/15,
+html.light .border-white\/20,
+html.light .border-white\/25 {
+  border-color: rgba(16, 32, 22, 0.16) !important;
+}
+
+html.light main section:not(:first-child) :where(.text-white, .text-gray-300, .text-gray-400, .text-gray-500, .text-white\/45, .text-white\/65, .text-white\/70, .text-white\/75, .text-white\/80, .text-white\/85) {
+  color: #102016 !important;
+}
+
+html.light main section:not(:first-child) :where(.relative.z-10, .absolute, .bg-\[\#006330\], .bg-\[\#002b15\]) :where(.text-white, .text-white\/45, .text-white\/65, .text-white\/70, .text-white\/75, .text-white\/80, .text-white\/85) {
+  color: #ffffff !important;
+}
+
+html.light main :where(.bg-\[\#0c0c0c\], .bg-black\/25, .bg-black\/40, .bg-black\/20, .bg-black\/35) :where(.text-white, .text-gray-300, .text-gray-400, .text-gray-500, .text-white\/45, .text-white\/65, .text-white\/70, .text-white\/75, .text-white\/80, .text-white\/85) {
+  color: #102016 !important;
+}
+
+html.light main input,
+html.light main textarea,
+html.light main select {
+  background-color: #ffffff !important;
+  border-color: rgba(16, 32, 22, 0.18) !important;
+  color: #102016 !important;
+}
+
+html.light main input::placeholder,
+html.light main textarea::placeholder {
+  color: rgba(16, 32, 22, 0.45) !important;
+}
+
+html.light footer {
+  background: #102016 !important;
+  color: rgba(255, 255, 255, 0.7) !important;
+}
+
+/* Light-mode homepage contrast refinements */
+html.light main section.from-\[\#002b15\],
+html.light main section.from-\[\#00170a\],
+html.light main section.to-\[\#004d26\],
+html.light main section.to-\[\#002b15\],
+html.light main section.bg-\[\#006330\] {
+  color: #ffffff !important;
+}
+
+html.light main section.from-\[\#002b15\] :where(.text-white, .text-gray-300, .text-gray-400, .text-gray-500, .text-white\/70, .text-white\/75, .text-white\/80, .text-white\/85),
+html.light main section.from-\[\#00170a\] :where(.text-white, .text-gray-300, .text-gray-400, .text-gray-500, .text-white\/70, .text-white\/75, .text-white\/80, .text-white\/85),
+html.light main section.to-\[\#004d26\] :where(.text-white, .text-gray-300, .text-gray-400, .text-gray-500, .text-white\/70, .text-white\/75, .text-white\/80, .text-white\/85),
+html.light main section.to-\[\#002b15\] :where(.text-white, .text-gray-300, .text-gray-400, .text-gray-500, .text-white\/70, .text-white\/75, .text-white\/80, .text-white\/85),
+html.light main section.bg-\[\#006330\] :where(.text-white, .text-gray-300, .text-gray-400, .text-gray-500, .text-white\/70, .text-white\/75, .text-white\/80, .text-white\/85) {
+  color: #ffffff !important;
+}
+
+html.light main section:not(:first-child) :where(.text-\[\#fff\], .text-white-400, .text-white-300) {
+  color: #24422f !important;
+}
+
+html.light main section:not(:first-child) :where(.text-gray-300, .text-gray-400, .text-gray-500, .text-white\/70, .text-white\/75, .text-white\/80, .text-white\/85) {
+  color: #31533e !important;
+}
+
+html.light main section:not(:first-child) :where(.bg-white, .bg-\[\#fff\]) :where(.text-\[\#333\], .text-\[\#111\], .text-\[\#999\]) {
+  color: inherit;
+}
+
+html.light main section:not(:first-child) svg[stroke="#fff"] {
+  stroke: #102016 !important;
+}
+
+html.light main section:not(:first-child) svg[fill="#fff"] {
+  fill: #102016 !important;
+}
+
+html.light main section:not(:first-child) .bg-gradient-to-r.from-\[\#f5f6f6\],
+html.light main section:not(:first-child) .bg-gradient-to-l.from-\[\#f5f6f6\] {
+  --tw-gradient-from: #f7f5ee var(--tw-gradient-from-position) !important;
+}
+
+html.light main section:not(:first-child) :where(.border-l-2.border-\[\#006330\]) {
+  border-color: #006330 !important;
+}
+
+html.light main section:not(:first-child) a.text-white-400,
+html.light main section:not(:first-child) a.text-white,
+html.light main section:not(:first-child) .text-\[\#FFDF1B\] {
+  color: #7a5f00 !important;
+}
+
+html.light main section:not(:first-child) .bg-\[\#006330\],
+html.light main section:not(:first-child) a.bg-\[\#006330\],
+html.light main section:not(:first-child) button.bg-\[\#006330\] {
+  background-color: #006330 !important;
+  color: #ffffff !important;
+}
+
+html.light main section:not(:first-child) .bg-\[\#006330\] .text-\[\#FFDF1B\],
+html.light main section:not(:first-child) section.bg-\[\#006330\] .text-\[\#FFDF1B\],
+html.light main section.from-\[\#00170a\] .text-\[\#FFDF1B\],
+html.light main section.from-\[\#002b15\] .text-\[\#FFDF1B\] {
+  color: #FFDF1B !important;
+}

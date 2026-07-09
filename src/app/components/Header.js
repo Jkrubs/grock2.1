@@ -3,41 +3,80 @@
 import { useEffect, useState } from "react";
 import Image from "next/image";
 
+const applyTheme = (theme) => {
+  document.documentElement.classList.toggle("dark", theme === "dark");
+  document.documentElement.classList.toggle("light", theme === "light");
+  document.documentElement.dataset.theme = theme;
+};
+
 export default function Header() {
-  // State to track scroll position for header styling
   const [isScrolled, setIsScrolled] = useState(false);
-  // State for mobile drawer menu toggle
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [theme, setTheme] = useState("dark");
+
+  useEffect(() => {
+    const savedTheme = window.localStorage.getItem("greenrock-theme");
+    const preferredTheme = window.matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark";
+    const nextTheme = savedTheme || preferredTheme;
+
+    setTheme(nextTheme);
+    applyTheme(nextTheme);
+  }, []);
 
   useEffect(() => {
     const handleScroll = () => {
-      // Toggle sticky style when user scrolls past 20px
-      if (window.scrollY > 20) {
-        setIsScrolled(true);
-      } else {
-        setIsScrolled(false);
-      }
+      setIsScrolled(window.scrollY > 20);
     };
 
     window.addEventListener("scroll", handleScroll);
-    handleScroll(); // Trigger check on mount
+    handleScroll();
 
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
 
+  const toggleTheme = () => {
+    const nextTheme = theme === "dark" ? "light" : "dark";
+    setTheme(nextTheme);
+    applyTheme(nextTheme);
+    window.localStorage.setItem("greenrock-theme", nextTheme);
+  };
+
+  const isLightHeader = theme === "light" && isScrolled;
+  const navTextClass = isLightHeader ? "text-[#102016]" : "text-white";
+  const subTextClass = isLightHeader ? "text-[#31533e]" : "text-white/70";
+
+  const ThemeToggle = ({ className = "" }) => (
+    <button
+      type="button"
+      onClick={toggleTheme}
+      className={`inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/20 bg-black/25 text-white transition-colors hover:border-[#FFDF1B] hover:text-[#FFDF1B] focus:outline-none ${isLightHeader ? "border-[#102016]/20 bg-white text-[#102016]" : ""} ${className}`}
+      aria-label={`Switch to ${theme === "dark" ? "light" : "dark"} mode`}
+      title={`Switch to ${theme === "dark" ? "light" : "dark"} mode`}
+    >
+      {theme === "dark" ? (
+        <svg className="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 3v2m0 14v2m9-9h-2M5 12H3m15.36-6.36-1.42 1.42M7.06 16.94l-1.42 1.42m12.72 0-1.42-1.42M7.06 7.06 5.64 5.64" />
+          <circle cx="12" cy="12" r="4" strokeWidth="2" />
+        </svg>
+      ) : (
+        <svg className="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 12.8A8.5 8.5 0 1 1 11.2 3 6.5 6.5 0 0 0 21 12.8Z" />
+        </svg>
+      )}
+    </button>
+  );
+
   return (
     <header
       className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
         isScrolled
-          ? "bg-[#0b0b0b]/95 backdrop-blur-md border-b-2 border-[#FFDF1B] py-3 shadow-xl"
+          ? `${isLightHeader ? "bg-[#f7f5ee]/95" : "bg-[#0b0b0b]/95"} backdrop-blur-md border-b-2 border-[#FFDF1B] py-3 shadow-xl`
           : "bg-transparent py-6"
       }`}
     >
       <div className="max-w-7xl mx-auto px-6 flex justify-between items-center">
-        
-        {/* GreenRock logo image from public assets. */}
         <a href="/" className="flex items-center space-x-3 group">
           <Image
             src="/GreenRock Logo.webp"
@@ -47,63 +86,29 @@ export default function Header() {
             className="h-10 w-10 rounded-full object-cover border border-[#FFDF1B] shadow-md transition-transform duration-300 group-hover:scale-105"
           />
           <div className="flex flex-col">
-            <span className="font-bold text-sm tracking-widest text-white uppercase leading-none">
+            <span className={`font-bold text-sm tracking-widest uppercase leading-none transition-colors ${navTextClass}`}>
               GREENROCK
             </span>
-            <span className="text-[10px] text-white-400 tracking-wider font-light uppercase leading-none mt-1">
+            <span className={`text-[10px] tracking-wider font-light uppercase leading-none mt-1 transition-colors ${subTextClass}`}>
               SOLUTIONS
             </span>
           </div>
         </a>
 
-        {/* Desktop Navigation Menu */}
         <nav className="hidden md:flex items-center space-x-6 lg:space-x-8">
-          <a
-            href="/"
-            className="text-xs font-semibold uppercase tracking-widest text-white-300 hover:text-[#FFDF1B] transition-colors py-2"
-          >
-            Home
-          </a>
-          <a
-            href="/services"
-            className="text-xs font-semibold uppercase tracking-widest text-white-300 hover:text-[#FFDF1B] transition-colors py-2"
-          >
-            Services
-          </a>
-          <a
-            href="/projects"
-            className="text-xs font-semibold uppercase tracking-widest text-white-300 hover:text-[#FFDF1B] transition-colors py-2"
-          >
-            Projects
-          </a>
-          <a
-            href="/#sectors"
-            className="text-xs font-semibold uppercase tracking-widest text-white-300 hover:text-[#FFDF1B] transition-colors py-2"
-          >
-            Sectors
-          </a>
-          <a
-            href="/about"
-            className="text-xs font-semibold uppercase tracking-widest text-white-300 hover:text-[#FFDF1B] transition-colors py-2"
-          >
-            About Us
-          </a>
-          <a
-            href="/contact"
-            className="text-xs font-semibold uppercase tracking-widest text-white-300 hover:text-[#FFDF1B] transition-colors py-2"
-          >
-            Contact
-          </a>
+          {[['Home', '/'], ['Services', '/services'], ['Projects', '/projects'], ['Sectors', '/#sectors'], ['About Us', '/about'], ['Contact', '/contact']].map(([label, href]) => (
+            <a
+              key={href}
+              href={href}
+              className={`text-xs font-semibold uppercase tracking-widest hover:text-[#FFDF1B] transition-colors py-2 ${navTextClass}`}
+            >
+              {label}
+            </a>
+          ))}
         </nav>
 
-        {/* Search Icon & Call To Action (CTA) Button */}
         <div className="hidden md:flex items-center space-x-6">
-          <button className="text-gray-400 hover:text-white transition-colors focus:outline-none" aria-label="Search">
-            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-            </svg>
-          </button>
-          
+          <ThemeToggle />
           <a
             href="/contact"
             className="bg-[#006330] hover:bg-[#004d26] text-white border border-[#FFDF1B] px-5 py-2 text-xs font-bold uppercase tracking-wider transition-all duration-300 shadow-md hover:shadow-lg hover:-translate-y-[1px]"
@@ -112,16 +117,11 @@ export default function Header() {
           </a>
         </div>
 
-        {/* Mobile menu controls */}
         <div className="flex items-center space-x-4 md:hidden">
-          <button className="text-gray-400 hover:text-white transition-colors focus:outline-none" aria-label="Search">
-            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-            </svg>
-          </button>
+          <ThemeToggle className="h-9 w-9" />
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="text-white hover:text-[#FFDF1B] focus:outline-none"
+            className={`${navTextClass} hover:text-[#FFDF1B] focus:outline-none transition-colors`}
             aria-label="Toggle Menu"
           >
             {isMobileMenuOpen ? (
@@ -137,51 +137,18 @@ export default function Header() {
         </div>
       </div>
 
-      {/* Mobile Drawer Menu Overlays */}
       {isMobileMenuOpen && (
-        <div className="md:hidden bg-[#0d0d0d] border-t border-white/10 px-6 py-4 space-y-3 absolute top-full left-0 w-full shadow-2xl animate-fadeIn">
-          <a
-            href="/"
-            onClick={() => setIsMobileMenuOpen(false)}
-            className="block text-sm uppercase tracking-wider text-gray-300 hover:text-[#FFDF1B] transition-colors py-2 border-b border-white/5"
-          >
-            Home
-          </a>
-          <a
-            href="/services"
-            onClick={() => setIsMobileMenuOpen(false)}
-            className="block text-sm uppercase tracking-wider text-gray-300 hover:text-[#FFDF1B] transition-colors py-2 border-b border-white/5"
-          >
-            Services
-          </a>
-          <a
-            href="/projects"
-            onClick={() => setIsMobileMenuOpen(false)}
-            className="block text-sm uppercase tracking-wider text-gray-300 hover:text-[#FFDF1B] transition-colors py-2 border-b border-white/5"
-          >
-            Projects
-          </a>
-          <a
-            href="/#sectors"
-            onClick={() => setIsMobileMenuOpen(false)}
-            className="block text-sm uppercase tracking-wider text-gray-300 hover:text-[#FFDF1B] transition-colors py-2 border-b border-white/5"
-          >
-            Sectors
-          </a>
-          <a
-            href="/about"
-            onClick={() => setIsMobileMenuOpen(false)}
-            className="block text-sm uppercase tracking-wider text-gray-300 hover:text-[#FFDF1B] transition-colors py-2 border-b border-white/5"
-          >
-            About Us
-          </a>
-          <a
-            href="/contact"
-            onClick={() => setIsMobileMenuOpen(false)}
-            className="block text-sm uppercase tracking-wider text-gray-300 hover:text-[#FFDF1B] transition-colors py-2"
-          >
-            Contact
-          </a>
+        <div className={`md:hidden border-t px-6 py-4 space-y-3 absolute top-full left-0 w-full shadow-2xl animate-fadeIn ${theme === "light" ? "bg-[#f7f5ee] border-[#102016]/10" : "bg-[#0d0d0d] border-white/10"}`}>
+          {[['Home', '/'], ['Services', '/services'], ['Projects', '/projects'], ['Sectors', '/#sectors'], ['About Us', '/about'], ['Contact', '/contact']].map(([label, href], index, links) => (
+            <a
+              key={href}
+              href={href}
+              onClick={() => setIsMobileMenuOpen(false)}
+              className={`block text-sm uppercase tracking-wider hover:text-[#FFDF1B] transition-colors py-2 ${theme === "light" ? "text-[#102016]" : "text-gray-300"} ${index < links.length - 1 ? theme === "light" ? "border-b border-[#102016]/10" : "border-b border-white/5" : ""}`}
+            >
+              {label}
+            </a>
+          ))}
           <div className="pt-2">
             <a
               href="/contact"
@@ -196,4 +163,5 @@ export default function Header() {
     </header>
   );
 }
+
 

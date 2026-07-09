@@ -24,8 +24,15 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className="dark scroll-smooth">
+    <html lang="en" className="dark scroll-smooth" suppressHydrationWarning>
       <head>
+        <Script
+          id="theme-init"
+          strategy="beforeInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `(function(){try{var saved=localStorage.getItem("greenrock-theme");var preferred=window.matchMedia("(prefers-color-scheme: light)").matches?"light":"dark";var theme=saved||preferred;document.documentElement.classList.toggle("dark",theme==="dark");document.documentElement.classList.toggle("light",theme==="light");document.documentElement.dataset.theme=theme;}catch(e){document.documentElement.classList.add("dark");}})();`,
+          }}
+        />
         {/* Load GSAP and CustomEase via CDN */}
         <Script
           src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
@@ -56,3 +63,5 @@ export default function RootLayout({ children }) {
     </html>
   );
 }
+
+
