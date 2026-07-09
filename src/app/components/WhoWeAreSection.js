@@ -42,7 +42,7 @@ export default function WhoWeAreSection() {
               <p key={idx}>{paragraph}</p>
             ))}
           </div>
-          <button className="bg-[#006330] hover:bg-[#004d26] text-white border border-[#FFDF1B] text-center px-8 py-4 mt-5  text-xs font-bold uppercase tracking-widest transition-all duration-300 shadow-lg hover:shadow-[#006330]/50">ABOUT US</button>
+          <a href="/about" className="inline-flex bg-[#006330] hover:bg-[#004d26] text-white border border-[#FFDF1B] text-center px-8 py-4 mt-5 text-xs font-bold uppercase tracking-widest transition-all duration-300 shadow-lg hover:shadow-[#006330]/50">ABOUT US</a>
         </div>
 
         <div className="relative">
@@ -88,3 +88,4 @@ export default function WhoWeAreSection() {
     </section>
   );
 }
+

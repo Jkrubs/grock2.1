@@ -83,7 +83,7 @@ export default function Header() {
             Sectors
           </a>
           <a
-            href="/#about"
+            href="/about"
             className="text-xs font-semibold uppercase tracking-widest text-white-300 hover:text-[#FFDF1B] transition-colors py-2"
           >
             About Us
@@ -169,7 +169,7 @@ export default function Header() {
             Sectors
           </a>
           <a
-            href="/#about"
+            href="/about"
             onClick={() => setIsMobileMenuOpen(false)}
             className="block text-sm uppercase tracking-wider text-gray-300 hover:text-[#FFDF1B] transition-colors py-2 border-b border-white/5"
           >
@@ -196,3 +196,4 @@ export default function Header() {
     </header>
   );
 }
+
