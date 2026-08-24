@@ -4,6 +4,7 @@ import FinalCtaSection from "./components/FinalCtaSection";
 import HeroSection from "./components/HeroSection";
 import OwnershipSection from "./components/OwnershipSection";
 import SectorsSection from "./components/SectorsSection";
+import MeetTheATeamSection from "./components/MeetTheATeamSection";
 import TestimonialSlider from "./components/TestimonialSlider";
 import TrustStatsSection from "./components/TrustStatsSection";
 import WhoWeAreSection from "./components/WhoWeAreSection";
@@ -21,6 +22,7 @@ export default function Home() {
       <WhoWeAreSection />
       <SectorsSection />
       <OwnershipSection />
+      <MeetTheATeamSection />
       <FeaturedProjectsSection />
       <TestimonialSlider />
       <FinalCtaSection />
