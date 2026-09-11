@@ -73,7 +73,7 @@ export default function MeetTheATeamSection() {
               </div>
 
               <a
-                href={`tel:${phoneNumber}`}
+                href={`tel:${member.phone}`}
                 className="mt-8 inline-flex items-center justify-center border border-[#FFDF1B] bg-[#006330] px-5 py-3 text-xs font-bold uppercase tracking-widest text-white transition-colors hover:bg-[#004d26]"
               >
                 Call Now
