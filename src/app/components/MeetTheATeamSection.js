@@ -1,4 +1,3 @@
-const phoneNumber = "0702044257";
 
 const team = [
   {
@@ -29,7 +28,7 @@ const team = [
     name: "Gertrude Kamau",
     role: "Client Relations Lead",
     initials: "GK",
-    phone:"0717089646",
+    phone:"0712517880",
     summary:
       "Keeps communication smooth between clients and the site team, helping questions, approvals, and updates reach the right people fast.",
   },
